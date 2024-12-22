@@ -4,7 +4,7 @@
     "Version": "1.0.0",
     "Description": "Interiors to match Seaside Valley exteriors - toned down & more New England-inspired",
     "UniqueID": "rainkius.SeasideInteriors",
-    "UpdateKeys": [],
+    "UpdateKeys": ["Nexus:30227"],
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
     },
