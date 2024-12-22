@@ -1,0 +1,39 @@
+For slightly more advanced users - Seaside Interiors has some textures that are OVERLAYS only and I took care to stick to the original shape of the items underneath most of the time. This means if there is something you don't like but you don't want to disable the entire tilesheet via the config, you can simply delete that part of the tilesheet while using the rest. (This would require you to use some kind of graphics software) 
+
+****************************************************************************
+  Files that can be freely edited (i.e. you can delete anything you want):
+****************************************************************************
+- LooseSprites Folder:
+    - Cursors2 (only modifies the giant omelet and table texture. If you delete the whole thing, it won't visually match during the event but won't cause any issues)
+    - temporary_sprites_1
+    
+- Maps Folder: 
+    - Harvey Balloon Tiles (if you don't want to use my recolor of harvey's balloon just delete it and leave this file blank)
+    - Island_Hut_Tilesheet
+    - MovieTheater_Tilesheet
+    - pirates_tilesheet
+
+- TileSheets Folder: 
+    - Craftables
+    - furniture_2 **Note: for ALL furniture tilesheets, if you edit anything your character can sit on (chairs, couches, etc) it also needs to be edited on the "Front" tilesheet as well
+    - furniture_3
+    - joja_furniture & _Green variant
+    - junimo_furniture
+    - retro_furniture
+    
+    
+***************************************
+  Files with restrictions on editing:
+***************************************
+- Note: I did change the shape of a FEW things and a few items have transparency - both of these things make it so there is additional code that makes them appear correctly so they can't simply be deleted off the tilesheet.
+
+- LooseSprites Folder:
+    - Cursors : Cannot delete the Clinic doors OR the frog terrarium from Sebastian's 14 heart event (Both have transparency).
+
+- Maps Folder:     
+    - DesertTiles : Cannot delete the Potted Cactus or the Prize machine, as I edited the shape of both. 
+    - MovieTheaterJoja_Tilesheet & _Green variant : The rug has translations that are overlays, so you would need to edit the files in the Translations folder as well *only if* you edit the rug.
+    
+- TileSheets Folder:
+    - Furniture : Joja Sign has green version and translations. Butterfly Hutch has transparency and cannot be deleted.
+    - wizard_furniture : Changed the shape of the chimney on the fireplace, so it cannot be deleted.

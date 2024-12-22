@@ -1,0 +1,17 @@
+{
+    "Name": "Seaside Interiors",
+    "Author": "rainkius",
+    "Version": "1.0.0",
+    "Description": "Interiors to match Seaside Valley exteriors - toned down & more New England-inspired",
+    "UniqueID": "rainkius.SeasideInteriors",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+	   {
+		  "UniqueID": "rainkius.SeasideValley",
+		  "IsRequired": false
+	   },
+    ]  
+}

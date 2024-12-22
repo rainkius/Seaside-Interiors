@@ -1,0 +1,21 @@
+townInterior & townInterior_2: 
+- Rhodox (formerly PainterlyPack.net) for wood, stone, and cloth textures.
+- Prophet for the Clinic bedframe (chopped down to fit) - https://www.nexusmods.com/stardewvalley/mods/7340
+- Cometkins Better Crops/Artisan Goods - used the colors and reduced sprites for the produce in JojaMart/Pierre's, and the vegetable on Marnie's cutting board
+- Small deco from: https://twitter.com/4_9_13  (Marnie's shelves books)
+- Small deco from: https://penzilla.itch.io/  (Marnie's Kitchen teapot)
+- Details of 1 fridge (french door type) from: https://limezu.itch.io/  (townInterior_2 kitchens)
+
+
+Elliott House Tiles:
+- Rhodox for wood planks as walls, flowers, and wood & cloth textures.
+
+Furniture.png:
+- Rugs - Patchwork rug replaced with an image from a Walmart rug. Old World Rug & Modern rug each replaced with a Magnolia Homes rug.
+
+
+General credits: 
+- Lots of textures used from Minecraft (stone, wool, etc as a base)
+- A few sprites from Terraria (small items)
+- Flowers, cactus, and LOTS of wood, stone, cloth textures from Rhodox used throughout
+- Cometkins Better Artisan Goods, Better Crops and Foraging - used the colors and sometimes the sprites directly to match items (such as the eggs in the incubators on Craftables tilesheet, any sunflowers, etc)
