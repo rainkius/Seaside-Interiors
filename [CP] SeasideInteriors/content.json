@@ -63,10 +63,10 @@
             "Description": "Ginger Island Hut Interior",
             "Section": "Ginger Island"
 		},
-        "GIPirateCave": {
+        "GIPirateCove": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "Ginger Island Pirate Cave",
+            "Description": "Ginger Island Pirate Cove",
             "Section": "Ginger Island"
 		},
         "GITreeHouse": {
@@ -294,6 +294,17 @@
         
     //Fixes for individual locations (including small map edits) - non optional
         {
+			"LogName": "Adventure Guild Fixes",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_AdventureGuildFix.png",
+            "When": {
+                "LocationName": "AdventureGuild"
+			},
+            "Update": "OnLocationChange"
+		},
+        {
 			"LogName": "Marnie Shop Fixes",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
@@ -495,7 +506,7 @@
 			"Target": "Maps/townInterior",
             "FromFile": "assets/Fixes/{{TargetWithoutPath}}_TrailerBigFix.png",
             "When": {
-                "LocationName": "TrailerBig"
+                "LocationName": "Trailer_Big"
 			},
             "Update": "OnLocationChange"
 		},
@@ -504,9 +515,9 @@
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
 			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_TrailerBigFix.png",
+            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_TrailerFix.png",
             "When": {
-                "LocationName": "TrailerBig"
+                "LocationName": "Trailer"
 			},
             "Update": "OnLocationChange"
 		},
@@ -674,6 +685,16 @@
 			}
 		},
         {
+            "LogName": "Ginger Island Field Office Interior",
+            "Action": "EditImage",
+		    "PatchMode": "Overlay",
+            "Target": "LooseSprites/Cursors2",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_FieldOffice.png",
+            "When": {
+				"GIFieldOffice": "true"
+			}
+		},
+        {
             "LogName": "Ginger Island Hut Interior", //does not edit the foliage
             "Action": "EditImage",
             "PatchMode": "Overlay",
@@ -684,13 +705,13 @@
 			}
 		},
         {
-            "LogName": "Ginger Island Pirate Cave", //does not edit everything
+            "LogName": "Ginger Island Pirate Cove", //does not edit everything
             "Action": "EditImage",
             "PatchMode": "Overlay",
-            "Target": "Maps/pirates_tilesheet",
+            "Target": "Maps/pirates_tilesheet, Maps/island_tilesheet_2",
             "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
             "When": {
-				"GIPirateCave": "true"
+				"GIPirateCove": "true"
 			}
 		},
         {
@@ -788,8 +809,20 @@
 			"LogName": "Farmhouse Crib", 
 			"Action": "EditImage",
             "PatchMode": "Replace",
-            "FromArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64 },
+            "FromArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64},
 			"ToArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64 },
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Crib.png",
+            "When": {
+                "FHCrib": "true",
+			},
+		},
+        {
+			"LogName": "Farmhouse Crib", 
+			"Action": "EditImage",
+            "PatchMode": "Replace",
+            "FromArea": { "X": 128, "Y": 288, "Width": 48, "Height": 64 },
+			"ToArea": { "X": 128, "Y": 288, "Width": 48, "Height": 64 },
 			"Target": "Maps/farmhouse_tiles",
             "FromFile": "assets/Maps/{{TargetWithoutPath}}_Crib.png",
             "When": {
