@@ -1,0 +1,313 @@
+{
+    "Changes": 
+    [
+    //Maps - Town - optional loads & edits
+        {
+          "LogName": "Bathhouse Interior",
+		  "Action": "EditImage",
+		  "PatchMode": "Replace",
+          "Target": "Maps/bathhouse_tiles",
+          "FromFile": "assets/{{Target}}.png",
+		  "When": {
+                "Bathhouse": "true"
+			}
+        },
+        {
+          "LogName": "Bathhouse Interior",
+		  "Action": "EditImage",
+		  "PatchMode": "Overlay",
+          "Target": "Maps/bathhouse_tiles",
+          "FromFile": "assets/Translations/{{TargetWithoutPath}}.{{language}}.png",
+		  "When": {
+                "Bathhouse": "true",
+                "Language": "es, fr, hu, it, ko, pt, ru, tr, zh" //No Japanese in vanilla files
+			}
+        },
+        {
+			"LogName": "Bathhouse Map Fix", //Only fixes missing stool top in women's locker room
+			"Action": "EditMap",
+			"Target": "Maps/BathHouse_WomensLocker",
+			"FromFile": "assets/Options/BathHouse_WomensLockerFix.tmx",
+			"FromArea": { "X": 11, "Y": 22, "Width": 1, "Height": 1 },
+			"ToArea": { "X": 11, "Y": 22, "Width": 1, "Height": 1 },
+		},
+        {
+			"LogName": "Caroline's Greenhouse",
+			"Action": "EditImage",
+		    "PatchMode": "Replace",
+			"Target": "Maps/CarolineGreenhouseTiles, Maps/CarolineGreenhouseTiles_rainy",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "CarolineGreenhouse": "true",
+			}
+		},
+        {
+			"LogName": "Elliott's Shack",
+			"Action": "EditImage",
+		    "PatchMode": "Replace",
+			"Target": "Maps/ElliottHouseTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "Elliott": "true",
+			}
+		},
+        {
+			"LogName": "Movie Theater",
+			"Action": "EditImage",
+		    "PatchMode": "Replace",
+			"Target": "Maps/MovieTheater_TileSheet, Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "MovieTheater": "true",
+			}
+		},
+        {
+			"LogName": "Movie Theater Joja Green",
+			"Action": "EditImage",
+		    "PatchMode": "Replace",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Green.png",
+            "When": {
+                "MovieTheater": "true",
+                "JojaGreen": "true",
+			}
+		},
+        {
+			"LogName": "Movie Theater Joja Intl",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/Translations/{{TargetWithoutPath}}_intl.png",
+            "When": {
+                "MovieTheater": "true",
+                "Language": "es, fr, hu, it, ja, ko, pt, tr, zh" //Russian has a different rug
+			}
+		},
+        {
+			"LogName": "Movie Theater Joja Russian",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/Translations/{{TargetWithoutPath}}.{{language}}.png",
+            "When": {
+                "MovieTheater": "true",
+                "Language": "ru" //Russian has a different rug
+			}
+		},
+        {
+			"LogName": "Movie Theater Joja Intl Green",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/Translations/{{TargetWithoutPath}}_intl_Green.png",
+            "When": {
+                "MovieTheater": "true",
+                "JojaGreen": "true",
+                "Language": "es, fr, hu, it, ja, ko, pt, tr, zh" //Russian has a different rug
+			}
+		},
+        {
+			"LogName": "Movie Theater Joja Russian Green",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/MovieTheaterJoja_TileSheet",
+            "FromFile": "assets/Translations/{{TargetWithoutPath}}_Green.{{language}}.png",
+            "When": {
+                "MovieTheater": "true",
+                "JojaGreen": "true",
+                "Language": "ru" //Russian has a different rug
+			}
+		},
+        {
+			"LogName": "Movie Theater Screen",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/MovieTheaterScreen_TileSheet",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "MovieTheater": "true",
+			}
+		},
+        {
+            "LogName": "Submarine",
+            "Action": "EditImage",
+		    "PatchMode": "Replace",
+            "Target": "Maps/submarine_tilesheet",
+            "FromFile": "assets/Maps/submarine_tilesheet.png",
+            "When": {
+				"Submarine": "true"
+			}
+		},
+        {
+            "LogName": "Submarine extras",
+            "Action": "EditImage",
+		    "PatchMode": "Overlay",
+            "Target": "LooseSprites/temporary_sprites_1",
+            "FromFile": "assets/LooseSprites/temporary_sprites_1_Submarine.png",
+            "When": {
+				"Submarine": "true"
+			}
+		},
+        {
+            "LogName": "Witch Hut",
+            "Action": "EditImage",
+		    "PatchMode": "Replace",
+            "Target": "Maps/WitchHutTiles",
+            "FromFile": "assets/Maps/WitchHutTiles.png",
+            "When": {
+				"WitchHut": "true"
+			}
+		},
+        {
+            "LogName": "Witch Hut", //Match ink pot to witch hut tiles
+            "Action": "EditImage",
+			"PatchMode": "Overlay",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_WitchInkPot.png",
+            "When": {
+				"WitchHut": "true"
+			}
+		},
+        
+    //Maps - Ginger Island - optional loads & edits
+        {
+            "LogName": "Ginger Island Field Office Interior",
+            "Action": "EditImage",
+		    "PatchMode": "Replace",
+            "Target": "Maps/Island_FieldOffice_Tilesheet",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+				"GIFieldOffice": "true"
+			}
+		},
+        {
+            "LogName": "Ginger Island Field Office Interior",
+            "Action": "EditImage",
+		    "PatchMode": "Overlay",
+            "Target": "LooseSprites/Cursors2",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_FieldOffice.png",
+            "When": {
+				"GIFieldOffice": "true"
+			}
+		},
+        {
+            "LogName": "Ginger Island Hut Interior", //does not edit the foliage
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Maps/Island_Hut_tilesheet",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+				"GIIslandHut": "true"
+			}
+		},
+        {
+            "LogName": "Ginger Island Pirate Cove", //does not edit everything
+            "Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Maps/pirates_tilesheet, Maps/island_tilesheet_2",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+				"GIPirateCove": "true"
+			}
+		},
+        {
+            "LogName": "Ginger Island Tree House Interior",
+            "Action": "EditImage",
+		    "PatchMode": "Replace",
+            "Target": "Maps/LeoTreeHouse_Tilesheet",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+				"GITreeHouse": "true"
+			}
+		},
+    //Misc edits    
+        {
+			"LogName": "Casino Interior", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/DesertTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "Casino": "true"
+			}
+		},
+        {
+			"LogName": "Casino Interior", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/DesertTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.{{language}}.png",
+            "When": {
+                "Casino": "true",
+                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
+			}
+		},
+        {
+			"LogName": "Casino Interior Cactus Fix", 
+			"Action": "EditImage",
+			"PatchMode": "Replace",            
+			"Target": "Maps/DesertTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "FromArea": { "X": 176, "Y": 288, "Width": 16, "Height": 22 },
+			"ToArea": { "X": 176, "Y": 288, "Width": 16, "Height": 22 },
+            "When": {
+                "Casino": "true"
+			}
+		},
+        {
+			"LogName": "Casino Interior Machine Fix", 
+			"Action": "EditImage",
+			"PatchMode": "Replace",            
+			"Target": "Maps/DesertTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "FromArea": { "X": 192, "Y": 288, "Width": 32, "Height": 48 },
+			"ToArea": { "X": 192, "Y": 288, "Width": 32, "Height": 48 },
+            "When": {
+                "Casino": "true"
+			}
+		},
+        {
+			"LogName": "Coop - Marnie Only",
+			"Action": "EditImage",
+		    "PatchMode": "Replace",
+			"Target": "Maps/coopTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "CoopInterior": "marnie",
+                "LocationName": "MarnieBarn",
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Coop - All Coops and Barns",
+			"Action": "EditImage",
+		    "PatchMode": "Replace",
+			"Target": "Maps/coopTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+            "When": {
+                "CoopInterior": "all",
+			},
+		},
+        {
+			"LogName": "Coop - Translations",
+			"Action": "EditImage",
+		    "PatchMode": "Overlay",
+			"Target": "Maps/coopTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.{{language}}.png",
+            "When": {
+                "CoopInterior": "all, marnie",
+                "Language": "de, es, fr, hu, it, ja, ko, pt, ru, tr, zh"
+			},
+		},
+        {
+			"LogName": "Coop-Related Craftables",
+			"Action": "EditImage",
+		    "PatchMode": "Overlay",
+			"Target": "TileSheets/Craftables",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_Barn.png",
+            "When": {
+                "CoopInterior": "all",
+			},
+		},
+    ]
+}

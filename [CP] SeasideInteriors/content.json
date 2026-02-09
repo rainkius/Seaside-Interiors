@@ -13,6 +13,12 @@
             "Description": "Bathhouse Interior",
             "Section": "Town"
 		},
+        "BathhouseMapFix": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Tiny map edit that fixes the missing stool top in the women's locker room",
+            "Section": "Town"
+		},
         "CarolineGreenhouse": {
 			"AllowValues": "true, false",
 			"Default": "true",
@@ -31,23 +37,283 @@
             "Description": "Changes to both versions of the movie theater & the screening room",
             "Section": "Town"
 		},
+        "Submarine": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Interior of the submarine at the Night Market",
+            "Section": "Town"
+		},
         "WitchHut": {
 			"AllowValues": "true, false",
 			"Default": "true",
             "Description": "Witch's Hut Interior",
             "Section": "Town"
 		},
-        //Farmhouse
+        "TownFramingColor": {
+			"AllowValues": "BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "WhiteWarm",
+            "Description": "Choose a framing/molding/window color for the town interiors",
+            "Section": "Town"
+		},
+        "TownDoorColor": {
+			"AllowValues": "BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "WhiteWarm",
+            "Description": "Color for doors in town interiors",
+            "Section": "Town"
+		}, 
+        "FurnitureStyle": {
+            "AllowValues": "Single, Multi, Original",
+			"Default": "Single",
+            "Description": "Global furniture style -  Single is all a unified color, multi has light, med and dark shades of the same color, and Original has the 3 different colors shown in the original previews (Original does not use the color options below, it is what it is)",
+            "Section": "Town"
+        },
+        "TownFurnitureColor": {
+			"AllowValues": "BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Walnut",
+            "Description": "The color that will be either single or multi-toned. If you chose Original style, this choice affects nothing.",
+            "Section": "Town"
+		},
+        
+        //Specific Location edits
+        "AdventureGuildInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Sets the framing, furniture and door color in the adventure guild to darker wood tones (Raisin for framing, Chestnut for furniture & door)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "BlacksmithInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Framing, window and door made warm black; also makes bedspread blue, bedroom wall white plaster, and better color matches parts of the forge",
+            "Section": "Location-Specific Unique Edits"
+		},        
+        "CarpenterInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Changes counters & shelf in lab room area of the carpenter shop",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "CarpenterMapFix": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "2 small map edits to the carpenter shop - Fixes the double bed in Robin's room and the paneling by the lab room. (Not compatible with SVE or Less Ugly Interiors - disabled automatically if you have either mod)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "CarpenterFraming": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Cowboy",
+            "Description": "Set the color of the framing and windows in the carpenter shop. DEFAULT will use whatever you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},        
+        "CarpenterFurn": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Cowboy",
+            "Description": "Set the color of the furniture in the carpenter shop. DEFAULT will use whatever you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "CommCtrInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Corrects a few issues in the refurbished Community Center - sink in kitchen, makes black couch into blue in reading corner, and fixes the shadow under pantry shelf",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "CommCtrFraming": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "BlackWarm",
+            "Description": "Set the color of the framing and windows in the refurbished Community Center. DEFAULT will use whatever you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "CommCtrFurn": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Earth",
+            "Description": "Set the color of the furniture in the refurbished Community Center. DEFAULT will use whatever you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "HaleyInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Gives Haley a striped pink bedspead and Emily a rainbow one",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "HarveyInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Replaces the plaid wallpapers and countertop in Harvey's apartment",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "LeahInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Gives Leah's house green framing, stone floors instead of brick & hay, and a plaid bedspead",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "MarnieInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Changes Jas's bedspread and stool cushion to pink, and makes the kitchen a custom white wood with a stove",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "MarnieMapEdit": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Small map edit to Marnie's house to fix Jas's bed (Not compatible with SVE or Less Ugly Interiors and will not apply if you have either mod)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "MarnieFraming": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "WhiteWarm",
+            "Description": "Set the color of the framing and windows in Marnie's house. DEFAULT will use whatever colors you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "MuseumInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Slight edit to stool and step-stool to better match colors",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "MuseumFraming": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Tobacco",
+            "Description": "Set the color of the framing and windows in the museum. DEFAULT will use whatever colors you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "MuseumFurn": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Tobacco",
+            "Description": "Set the color of the furniture in the museum. DEFAULT will use whatever color you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "PierreMapEdit": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Fixes the double bed in Pierre & Caroline's roomn (Compatible with both SVE and Less Ugly Interiors)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "PierreInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Gives Pierre & Caroline a custom bedspread and fixes the corkboard texture (note: bedspread will not look right without the map fix enabled)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "PierreFraming": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "WhiteWarm",
+            "Description": "Set the color of the framing and windows in Pierre's shop. DEFAULT will use whatever colors you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "PierreFurn": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Pale",
+            "Description": "Set the color of the furniture in Pierre's shop. DEFAULT will use whatever color you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SaloonInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Changes the wall in Gus's bedroom to plaster, gives him a plaid bedspread, fixes some shadows around the bar shelf corners, and removes the unnecessary cord hanging off the TV in Alex's special room",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SaloonFraming": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "BlackWarm",
+            "Description": "Set the color of the framing and windows in the saloon. DEFAULT will use whatever colors you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SaloonFurn": {
+			"AllowValues": "DEFAULT, BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Tudor",
+            "Description": "Set the color of the furniture in the saloon. DEFAULT will use whatever color you chose for the rest of the town.",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SaloonBarFraming": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "If enabled, the bar shelves and counter in the saloon will match the framing color (instead of the furniture color)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SamInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Makes both couches blue in Sam's house",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SamMapFix": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Tiny map edit to fix the footboard of Vincent's bed (Compatible with SVE and Less Ugly Interiors)",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "SebastianInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Gives Sebastian an appropriately dark wood basement - framing, door (both Warm Black) and furniture (Coffee)",
+            "Section": "Location-Specific Unique Edits"
+		},        
+        "TrailerInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Interior edits for Pam & Penny's trailer - changes the stove into another counter with a built in mini fridge and hot plate burner, makes all the wall lights the same (no lantern type), and uses a custom framing/wall color",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "TrailerUpdatedInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Interior edits for Pam & Penny's updated trailer - Gives each of their beds a custom bedspread color (Pam = purple, Penny = pink), changes the plank wall to beige plaster, and the greenhouse glass wall to blue plaster",
+            "Section": "Location-Specific Unique Edits"
+		},        
+        "WillyInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Light Grey framing color and more rustic shop counters for Willy's shop",
+            "Section": "Location-Specific Unique Edits"
+		},
+        "WizardInterior": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Sets framing color for Wizard interior (Tobacco). Also better matches the stone wall to the fireplace, fixes the books on the floor (no spare pixels), and replaces the rugs with fancier antique ones",
+            "Section": "Location-Specific Unique Edits"
+		},                
+        //Farmhouse & Farm
         "FHCrib": {
 			"AllowValues": "true, false",
 			"Default": "true",
             "Description": "Replace the crib in the farmhouse",
             "Section": "Farmhouse"
 		},
+        "CribColor": {
+			"AllowValues": "BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "Walnut",
+            "Description": "Crib wood color",
+            "Section": "Farmhouse"
+		},
+        "CribSheets": {
+			"AllowValues": "Green, Blue, Pink, Purple, Taupe, Yellow, Rainbow",
+			"Default": "Green",
+            "Description": "Crib sheet color",
+            "Section": "Farmhouse"
+		},
         "FHKitchen": {
 			"AllowValues": "retro, nice, false",
 			"Default": "retro",
             "Description": "Replace the kitchen in the farmhouse with the selected option",
+            "Section": "Farmhouse"
+		},
+        "FHFramingColor": {
+			"AllowValues": "BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "WhiteWarm",
+            "Description": "Select the color of the molding/framing/trim in the farmhouse (includes the island farmhouse)",
+            "Section": "Farmhouse"
+		},
+        "WallsFloors": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Makes the farmhouse flooring and wooden trim on wallpaper match the selected framing color and town flooring. Slight edits to the non-wood parts to better match general aesthetic. Only affects the 8 walls & floors from each farm map (+ the kids room dinos) - not all of them",
+            "Section": "Farmhouse"
+		},
+        "GreenhouseFramingColor": {
+			"AllowValues": "BlackCool, BlackWarm, Blue, Chestnut, Chocolate, Coffee, Cowboy, Earth, Green, Grey, GreyLight, Husk, Pale, Raisin, Red, Tobacco, Tudor, Walnut, WhiteCool, WhiteWarm",
+			"Default": "WhiteWarm",
+            "Description": "Select the color of the molding/framing/trim in the greenhouse",
             "Section": "Farmhouse"
 		},
         //Ginger Island
@@ -86,6 +352,12 @@
 			"AllowValues": "marnie, all, false",
 			"Default": "marnie",
             "Description": "Changes Coop & Barn interior tiles - Marnie = only affects Marnie's barn, All = Also changes the coops and barns on your farm.",
+            "Section": "Misc"
+		},
+        "HeartEvents": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "Edits textures related to villager heart and special events, such as Harvey's balloon ride, Sebastian's frog rescue, Gus's giant omelet, etc. Anything completely necessary (like bits of flooring or furniture) will be applied regardless of whether this is enabled or not",
             "Section": "Misc"
 		},
         //Furniture
@@ -136,7 +408,8 @@
 			"Default": "true",
             "Description": "Edit some of the Craftables tilesheet",
             "Section": "Furniture"
-		},        
+		},
+        
     },
     "DynamicTokens": [
 		{
@@ -148,894 +421,68 @@
 		"Value": "true",
 			"When": { "HasMod" : "FlashShifter.StardewValleyExpandedCP"},
 		},
+        {
+		"Name": "LUI",
+		"Value": "false",
+		},
+		{
+		"Name": "LUI",
+		"Value": "true",
+			"When": { "HasMod" : "uglynt.town.interiors"},
+		},
+        {
+		"Name": "AOYR",
+		"Value": "false",
+		},
+		{
+		"Name": "AOYR",
+		"Value": "true",
+			"When": { "HasMod" : "sb.AltarYoba"},
+		},
 	],
     
     
    "Changes": [
     
-    //Non-optional edits
+    //Non-optional edits - main town changes
         {
-			"LogName": "TownInteriors",
-			"Action": "Load",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png"
+			"LogName": "NonOptional Code",
+			"Action": "Include",
+			"FromFile": "code/NonOptionalEdits.json",
 		},
+            
+    
+    //Maps - Town & Ginger Island - optional loads & edits & Misc
         {
-			"LogName": "TownInterior int'l", //JojaMart to green
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_JojaMart_Green.png",
-            "When": {
-                "JojaGreen": "true"
-			}
-		},
-        {
-			"LogName": "TownInterior int'l", //Apply translations to non-Joja areas
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Translations/townInterior.{{language}}.png",
-            "When": {
-                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
-			}
-		},
-        {
-			"LogName": "JojaMart interior int'l", //Apply blue JojaMart translations
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Translations/townInterior_JojaMart.{{language}}.png",
-            "When": {
-                "JojaGreen": "false",
-                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
-			}
-		},
-        {
-			"LogName": "JojaMart interior int'l", //Apply green JojaMart translations
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Translations/townInterior_JojaMart_Green.{{language}}.png",
-            "When": {
-                "JojaGreen": "true",
-                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
-			}
-		},
-        {
-            "LogName": "JojaMart Ruins Blue",
-            "Action": "EditImage",
-            "PatchMode": "Replace",
-            "Target": "Maps/JojaRuins_TileSheet",
-            "FromFile": "assets/Maps/JojaRuins_TileSheet.png",
-            "When": {
-				"JojaGreen": "false"
-			}
-		},
-        {
-            "LogName": "JojaMart Ruins Green",
-            "Action": "EditImage",
-            "PatchMode": "Replace",
-            "Target": "Maps/JojaRuins_TileSheet",
-            "FromFile": "assets/Maps/JojaRuins_TileSheet_Green.png",
-            "When": {
-				"JojaGreen": "true"
-			}
-		},
-        {
-			"LogName": "Farmhouse Tiles", //Makes framing, flooring etc match while in farmhouse
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/farmhouse_tiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png"
-		},
-        {
-			"LogName": "Harvey Balloon", //Harvey Heart Event Balloon Ride
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/HarveyBalloonTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png"
-		},
-        {
-			"LogName": "Cursors", //Heart Events, Interior Doors, etc
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "LooseSprites/Cursors",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"
-		},
-        {
-			"LogName": "Cursors Door Window", //Door window transparency fix
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 581, "Y": 159, "Width": 34, "Height": 19 },
-			"ToArea": { "X": 581, "Y": 159, "Width": 34, "Height": 19 },
-			"Target": "LooseSprites/Cursors",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"            
-		},
-        {
-			"LogName": "Cursors Seb Frogs", //Sebastian Frog Enclosure transparency fix
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 641, "Y": 1534, "Width": 48, "Height": 9 },
-			"ToArea": { "X": 641, "Y": 1534, "Width": 48, "Height": 9 },
-			"Target": "LooseSprites/Cursors",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"            
-		},
-        {
-			"LogName": "Cursors2", //Gus Omelet Event
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "LooseSprites/Cursors2",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"
-		},
-        {
-			"LogName": "Temp Sprites", //Heart Events, etc
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "LooseSprites/temporary_sprites_1",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"
-		},
-        {
-			"LogName": "ChairTiles", //In-front-of-character matching edits
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/ChairTiles",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
-		},
-        {
-			"LogName": "ChairTiles", //Fix for smaller couches
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 160, "Y": 0, "Width": 48, "Height": 32 },
-			"ToArea": { "X": 160, "Y": 0, "Width": 48, "Height": 32},
-			"Target": "TileSheets/ChairTiles",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
-		},
-        
-    //Fixes for individual locations (including small map edits) - non optional
-        {
-			"LogName": "Adventure Guild Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_AdventureGuildFix.png",
-            "When": {
-                "LocationName": "AdventureGuild"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Marnie Shop Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_AnimalHouseFix.png",
-            "When": {
-                "LocationName": "AnimalShop"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Marnie Shop Map Edits", //Only edits Jas's bed
-			"Action": "EditMap",
-			"Target": "Maps/AnimalShop",
-            "FromFile": "assets/Fixes/AnimalShopFix.tmx",
-            "FromArea": { "X": 1, "Y": 6, "Width": 2, "Height": 3 },
-            "ToArea": { "X": 1, "Y": 6, "Width": 2, "Height": 3  },
-            "When": {
-                "SVE": "false"
-			},
-		},
-        {
-			"LogName": "Museum Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_ArchaeologyFix.png",
-            "When": {
-                "LocationName": "ArchaeologyHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Bathhouse Map Fix", //Only fixes missing stool top in women's locker room
-			"Action": "EditMap",
-			"Target": "Maps/BathHouse_WomensLocker",
-			"FromFile": "Assets/Fixes/BathHouse_WomensLockerFix.tmx",
-			"FromArea": { "X": 11, "Y": 22, "Width": 1, "Height": 1 },
-			"ToArea": { "X": 11, "Y": 22, "Width": 1, "Height": 1 },
-		},
-        {
-			"LogName": "Blacksmith Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_BlacksmithFix.png",
-            "When": {
-                "LocationName": "Blacksmith"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Refurb Comm Ctr Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_CommCtrRefurb.png",
-            "When": {
-                "LocationName": "CommunityCenter_Refurbished"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Haley & Emily House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_HaleyEmilyFix.png",
-            "When": {
-                "LocationName": "HaleyHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Harvey House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_HarveyFix.png",
-            "When": {
-                "LocationName": "HarveyRoom"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Alex House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_JoshHouseFix.png",
-            "When": {
-                "LocationName": "JoshHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Leah House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_LeahFix.png",
-            "When": {
-                "LocationName": "LeahHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Manor House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_ManorFix.png",
-            "When": {
-                "LocationName": "ManorHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Saloon Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_SaloonFix.png",
-            "When": {
-                "LocationName": "Saloon"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Sam House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_SamFix.png",
-            "When": {
-                "LocationName": "SamHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Carpenter Shop Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_ScienceFix.png",
-            "When": {
-                "LocationName": "ScienceHouse"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Carpenter Shop Map Edits", //Only edits double bed
-			"Action": "EditMap",
-			"Target": "Maps/ScienceHouse",
-            "FromFile": "assets/Fixes/ScienceHouseFixes.tmx",
-            "FromArea": { "X": 19, "Y": 3, "Width": 3, "Height": 3 },
-            "ToArea": { "X": 19, "Y": 3, "Width": 3, "Height": 3  },
-            "When": {
-                "SVE": "false"
-			},
-		},
-        {
-			"LogName": "Carpenter Shop Map Edits", //Only edits random dark paneling by lab room
-			"Action": "EditMap",
-			"Target": "Maps/ScienceHouse",
-            "FromFile": "assets/Fixes/ScienceHouseFixes.tmx",
-            "FromArea": { "X": 14, "Y": 17, "Width": 2, "Height": 3 },
-            "ToArea": { "X": 14, "Y": 17, "Width": 2, "Height": 3 },
-            "When": {
-                "SVE": "false"
-			},
-		},
-        {
-			"LogName": "Sebastian Room Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_SebastianFix.png",
-            "When": {
-                "LocationName": "SebastianRoom"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Pierre Shop Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_SeedShopFix.png",
-            "When": {
-                "LocationName": "SeedShop"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Pam House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_TrailerBigFix.png",
-            "When": {
-                "LocationName": "Trailer_Big"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Pam Trailer Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_TrailerFix.png",
-            "When": {
-                "LocationName": "Trailer"
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Wizard House Fixes",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Fixes/{{TargetWithoutPath}}_WizardFix.png",
-            "When": {
-                "LocationName": "WizardHouse"
-			},
-            "Update": "OnLocationChange"
+			"LogName": "Optional Town & Ginger Island Code",
+			"Action": "Include",
+			"FromFile": "code/OptionalLocations.json",
 		},
     
-    //Maps - Town - optional loads & edits
+    
+    //Heart events
         {
-          "LogName": "Bathhouse Interior",
-		  "Action": "EditImage",
-		  "PatchMode": "Replace",
-          "Target": "Maps/bathhouse_tiles",
-          "FromFile": "assets/{{Target}}.png",
-		  "When": {
-                "Bathhouse": "true"
-			}
-        },
-        {
-          "LogName": "Bathhouse Interior",
-		  "Action": "EditImage",
-		  "PatchMode": "Overlay",
-          "Target": "Maps/bathhouse_tiles",
-          "FromFile": "assets/Translations/{{TargetWithoutPath}}.{{language}}.png",
-		  "When": {
-                "Bathhouse": "true",
-                "Language": "es, fr, hu, it, ko, pt, ru, tr, zh" //No Japanese in vanilla files
-			}
-        },
-        {
-			"LogName": "Caroline's Greenhouse",
-			"Action": "EditImage",
-		    "PatchMode": "Replace",
-			"Target": "Maps/CarolineGreenhouseTiles, Maps/CarolineGreenhouseTiles_rainy",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
+			"LogName": "Heart Events code",
+			"Action": "Include",
+			"FromFile": "code/HeartEvents.json",
             "When": {
-                "CarolineGreenhouse": "true",
-			}
+                "HeartEvents": true,
+            },
 		},
+    //Customizations for framing, furniture etc
         {
-			"LogName": "Elliott's Shack",
-			"Action": "EditImage",
-		    "PatchMode": "Replace",
-			"Target": "Maps/ElliottHouseTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-                "Elliott": "true",
-			}
-		},
-        {
-			"LogName": "Movie Theater",
-			"Action": "EditImage",
-		    "PatchMode": "Replace",
-			"Target": "Maps/MovieTheater_TileSheet, Maps/MovieTheaterJoja_TileSheet",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-                "MovieTheater": "true",
-			}
-		},
-        {
-			"LogName": "Movie Theater Joja Green",
-			"Action": "EditImage",
-		    "PatchMode": "Replace",
-			"Target": "Maps/MovieTheaterJoja_TileSheet",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Green.png",
-            "When": {
-                "MovieTheater": "true",
-                "JojaGreen": "true",
-			}
-		},
-        {
-			"LogName": "Movie Theater Joja Intl",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/MovieTheaterJoja_TileSheet",
-            "FromFile": "assets/Translations/{{TargetWithoutPath}}_intl.png",
-            "When": {
-                "MovieTheater": "true",
-                "Language": "es, fr, hu, it, ja, ko, pt, tr, zh" //Russian has a different rug
-			}
-		},
-        {
-			"LogName": "Movie Theater Joja Russian",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/MovieTheaterJoja_TileSheet",
-            "FromFile": "assets/Translations/{{TargetWithoutPath}}.{{language}}.png",
-            "When": {
-                "MovieTheater": "true",
-                "Language": "ru" //Russian has a different rug
-			}
-		},
-        {
-			"LogName": "Movie Theater Joja Intl Green",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/MovieTheaterJoja_TileSheet",
-            "FromFile": "assets/Translations/{{TargetWithoutPath}}_intl_Green.png",
-            "When": {
-                "MovieTheater": "true",
-                "JojaGreen": "true",
-                "Language": "es, fr, hu, it, ja, ko, pt, tr, zh" //Russian has a different rug
-			}
-		},
-        {
-			"LogName": "Movie Theater Joja Russian Green",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/MovieTheaterJoja_TileSheet",
-            "FromFile": "assets/Translations/{{TargetWithoutPath}}_Green.{{language}}.png",
-            "When": {
-                "MovieTheater": "true",
-                "JojaGreen": "true",
-                "Language": "ru" //Russian has a different rug
-			}
-		},
-        {
-			"LogName": "Movie Theater Screen",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/MovieTheaterScreen_TileSheet",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-                "MovieTheater": "true",
-			}
-		},
-        {
-            "LogName": "- Witch Hut",
-            "Action": "EditImage",
-		    "PatchMode": "Replace",
-            "Target": "Maps/WitchHutTiles",
-            "FromFile": "assets/Maps/WitchHutTiles.png",
-            "When": {
-				"WitchHut": "true"
-			}
-		},
-        {
-            "LogName": "- Witch Hut", //Match ink pot to witch hut tiles
-            "Action": "EditImage",
-			"PatchMode": "Overlay",
-            "Target": "LooseSprites/Cursors",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_WitchInkPot.png",
-            "When": {
-				"WitchHut": "true"
-			}
+			"LogName": "Customizations code",
+			"Action": "Include",
+			"FromFile": "code/Customizations.json",
 		},
         
-    //Maps - Ginger Island - optional loads & edits
+    //Unique Location edits (e.g. framing at Marnie's, fixes to certain maps)
         {
-            "LogName": "Ginger Island Field Office Interior",
-            "Action": "EditImage",
-		    "PatchMode": "Replace",
-            "Target": "Maps/Island_FieldOffice_Tilesheet",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-				"GIFieldOffice": "true"
-			}
-		},
-        {
-            "LogName": "Ginger Island Field Office Interior",
-            "Action": "EditImage",
-		    "PatchMode": "Overlay",
-            "Target": "LooseSprites/Cursors2",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_FieldOffice.png",
-            "When": {
-				"GIFieldOffice": "true"
-			}
-		},
-        {
-            "LogName": "Ginger Island Hut Interior", //does not edit the foliage
-            "Action": "EditImage",
-            "PatchMode": "Overlay",
-            "Target": "Maps/Island_Hut_tilesheet",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-				"GIIslandHut": "true"
-			}
-		},
-        {
-            "LogName": "Ginger Island Pirate Cove", //does not edit everything
-            "Action": "EditImage",
-            "PatchMode": "Overlay",
-            "Target": "Maps/pirates_tilesheet, Maps/island_tilesheet_2",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-				"GIPirateCove": "true"
-			}
-		},
-        {
-            "LogName": "Ginger Island Tree House Interior",
-            "Action": "EditImage",
-		    "PatchMode": "Replace",
-            "Target": "Maps/LeoTreeHouse_Tilesheet",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-				"GITreeHouse": "true"
-			}
-		},
-    //Misc edits    
-        {
-			"LogName": "Casino Interior", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/DesertTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-                "Casino": "true"
-			}
-		},
-        {
-			"LogName": "Casino Interior", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/DesertTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.{{language}}.png",
-            "When": {
-                "Casino": "true",
-                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
-			}
-		},
-        {
-			"LogName": "Casino Interior Cactus Fix", 
-			"Action": "EditImage",
-			"PatchMode": "Replace",            
-			"Target": "Maps/DesertTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "FromArea": { "X": 176, "Y": 288, "Width": 16, "Height": 22 },
-			"ToArea": { "X": 176, "Y": 288, "Width": 16, "Height": 22 },
-            "When": {
-                "Casino": "true"
-			}
-		},
-        {
-			"LogName": "Casino Interior Machine Fix", 
-			"Action": "EditImage",
-			"PatchMode": "Replace",            
-			"Target": "Maps/DesertTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "FromArea": { "X": 192, "Y": 288, "Width": 32, "Height": 48 },
-			"ToArea": { "X": 192, "Y": 288, "Width": 32, "Height": 48 },
-            "When": {
-                "Casino": "true"
-			}
-		},
-        {
-			"LogName": "Coop - Marnie Only",
-			"Action": "EditImage",
-		    "PatchMode": "Replace",
-			"Target": "Maps/coopTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-                "CoopInterior": "marnie",
-                "LocationName": "MarnieBarn",
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Coop - All Coops and Barns",
-			"Action": "EditImage",
-		    "PatchMode": "Replace",
-			"Target": "Maps/coopTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png",
-            "When": {
-                "CoopInterior": "all",
-			},
-		},
-        {
-			"LogName": "Coop - Translations",
-			"Action": "EditImage",
-		    "PatchMode": "Overlay",
-			"Target": "Maps/coopTiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}.{{language}}.png",
-            "When": {
-                "CoopInterior": "all, marnie",
-                "Language": "de, es, fr, hu, it, ja, ko, pt, ru, tr, zh"
-			},
+			"LogName": "Unique Location Code",
+			"Action": "Include",
+			"FromFile": "code/UniqueLocationEdits.json",
 		},
         
-    //Farmhouse Edits
-        {
-			"LogName": "Farmhouse Crib", 
-			"Action": "EditImage",
-            "PatchMode": "Replace",
-            "FromArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64},
-			"ToArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64 },
-			"Target": "Maps/farmhouse_tiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Crib.png",
-            "When": {
-                "FHCrib": "true",
-			},
-		},
-        {
-			"LogName": "Farmhouse Crib", 
-			"Action": "EditImage",
-            "PatchMode": "Replace",
-            "FromArea": { "X": 128, "Y": 288, "Width": 48, "Height": 64 },
-			"ToArea": { "X": 128, "Y": 288, "Width": 48, "Height": 64 },
-			"Target": "Maps/farmhouse_tiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Crib.png",
-            "When": {
-                "FHCrib": "true",
-			},
-		},
-        {
-			"LogName": "Farmhouse Kitchen", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/farmhouse_tiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Kitchen-{{FHKitchen}}.png",
-            "When": {
-                "FHKitchen": "retro, nice"
-			}
-		},
-        {
-			"LogName": "Farmhouse Kitchen Fix 1", //minor fix #1
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 57, "Y": 205, "Width": 1, "Height": 2 },
-			"ToArea": { "X": 57, "Y": 205, "Width": 1, "Height": 2 },
-			"Target": "Maps/farmhouse_tiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Kitchen-{{FHKitchen}}.png",
-            "When": {
-                "FHKitchen": "retro, nice"
-			}
-		},
-        {
-			"LogName": "Farmhouse Kitchen Fix 2", //minor fix #2
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 95, "Y": 306, "Width": 1, "Height": 2 },
-			"ToArea": { "X": 95, "Y": 306, "Width": 1, "Height": 2 },
-			"Target": "Maps/farmhouse_tiles",
-            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Kitchen-{{FHKitchen}}.png",
-            "When": {
-                "FHKitchen": "retro, nice"
-			}
-		},
-        {
-			"LogName": "Farmhouse Kitchen Cursors2", //Fridge Doors
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "LooseSprites/Cursors2",
-            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_FridgeDoor-{{FHKitchen}}.png",
-            "When": {
-                "FHKitchen": "retro, nice"
-			}
-		},
-    //Furniture Edits
-        {
-			"LogName": "Furniture 1", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/furniture, Tilesheets/furnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "Furniture1": "true"
-			}
-		},
-        {
-			"LogName": "Furniture 1 Butterfly transparency", 
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 304, "Y": 976, "Width": 32, "Height": 33 },
-			"ToArea": { "X": 304, "Y": 976, "Width": 32, "Height": 33 },
-			"Target": "TileSheets/furniture",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "Furniture1": "true"
-			}
-		},
-        {
-			"LogName": "Furniture 1 Joja Green", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/furniture",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_JojaGreen.png",
-            "When": {
-                "Furniture1": "true",
-                "JojaGreen": "true"
-			}
-		},
-        {
-			"LogName": "Furniture 1 Translations Blue",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/furniture",
-            "FromFile": "assets/Translations/{{TargetWithoutPath}}.{{language}}.png",
-            "When": {
-                "Furniture1": "true",
-                "JojaGreen": "false",
-                "Language": "ja, ko, zh"
-			}
-		},
-        {
-			"LogName": "Furniture 1 Translations Green",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/furniture",
-            "FromFile": "assets/Translations/{{TargetWithoutPath}}_Green.{{language}}.png",
-            "When": {
-                "Furniture1": "true",
-                "JojaGreen": "true",
-                "Language": "ja, ko, zh"
-			}
-		},
-        {
-			"LogName": "Furniture 2", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/furniture_2, Tilesheets/furniture_2Front",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "Furniture2": "true"
-			}
-		},
-        {
-			"LogName": "Furniture 3", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/furniture_3, Tilesheets/furniture_3Front",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "Furniture3": "true"
-			}
-		},
-        {
-			"LogName": "Joja Furniture", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/joja_Furniture, Tilesheets/joja_FurnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "JojaFurniture": "true",
-                "JojaGreen": "false",
-			}
-		},
-        {
-			"LogName": "Joja Furniture Green", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/joja_Furniture, Tilesheets/joja_FurnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_Green.png",
-            "When": {
-                "JojaFurniture": "true",
-                "JojaGreen": "true",
-			}
-		},
-        {
-			"LogName": "Junimo Furniture", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/junimo_furniture, Tilesheets/junimo_furnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "JunimoFurniture": "true"
-			}
-		},
-        {
-			"LogName": "Retro Furniture", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/retro_furniture, Tilesheets/retro_furnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "RetroFurniture": "true"
-			}
-		},
-        {
-			"LogName": "Wizard Furniture", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/wizard_furniture, Tilesheets/wizard_furnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "WizardFurniture": "true"
-			}
-		},
-        {
-			"LogName": "Wizard Furniture", 
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-            "FromArea": { "X": 0, "Y": 64, "Width": 32, "Height": 43 },
-			"ToArea": { "X": 0, "Y": 64, "Width": 32, "Height": 43},
-			"Target": "TileSheets/wizard_furniture, Tilesheets/wizard_furnitureFront",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "WizardFurniture": "true"
-			}
-		},
-        {
-			"LogName": "Craftables", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/Craftables",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
-            "When": {
-                "Craftables": "true"
-			}
-		},
-        {
-			"LogName": "Craftables Green Joja Cooler", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "TileSheets/Craftables",
-            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_JojaGreen.png",
-            "When": {
-                "Craftables": "true",
-                "JojaGreen": "true"
-			}
-		},
-
    ]
 }
+

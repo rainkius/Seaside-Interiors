@@ -14,7 +14,6 @@ For slightly more advanced users - Seaside Interiors has some textures that are 
     - pirates_tilesheet
 
 - TileSheets Folder: 
-    - Craftables
     - furniture_2 **Note: for ALL furniture tilesheets, if you edit anything your character can sit on (chairs, couches, etc) it also needs to be edited on the "Front" tilesheet as well
     - furniture_3
     - joja_furniture & _Green variant
@@ -35,5 +34,6 @@ For slightly more advanced users - Seaside Interiors has some textures that are 
     - MovieTheaterJoja_Tilesheet & _Green variant : The rug has translations that are overlays, so you would need to edit the files in the Translations folder as well *only if* you edit the rug.
     
 - TileSheets Folder:
+    - Craftables : The telephone, coffee maker, and farm computer all have automatic wood recolors for the table part, so cannot be deleted (unless you also clear out the code)
     - Furniture : Joja Sign has green version and translations. Butterfly Hutch has transparency and cannot be deleted.
     - wizard_furniture : Changed the shape of the chimney on the fireplace, so it cannot be deleted.

@@ -1,0 +1,38 @@
+{
+    "Changes": 
+    [
+        {
+			"LogName": "Harvey Balloon", //Harvey Heart Event Balloon Ride
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/HarveyBalloonTiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png"
+		},
+        {
+			"LogName": "Cursors", //Heart Events
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors, LooseSprites/Cursors2, LooseSprites/temporary_sprites_1",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_Special.png"
+		},
+        {
+			"LogName": "Cursors Seb Frogs", //Sebastian Frog Enclosure transparency fix
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 641, "Y": 1534, "Width": 48, "Height": 9 },
+			"ToArea": { "X": 641, "Y": 1534, "Width": 48, "Height": 9 },
+			"Target": "LooseSprites/Cursors",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_Special.png"            
+		},
+        {
+			"LogName": "Cursors2 Willy Bug Meat", //Replacement of pile of bug meat with barrel of meat
+			"Action": "EditImage",
+            "PatchMode": "Replace",
+            "FromArea": { "X": 193, "Y": 62, "Width": 63, "Height": 31 },
+			"ToArea": { "X": 193, "Y": 62, "Width": 63, "Height": 31 },
+			"Target": "LooseSprites/Cursors2",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_Special.png"            
+		},
+    
+    ]
+}

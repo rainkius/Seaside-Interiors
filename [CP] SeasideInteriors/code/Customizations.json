@@ -1,0 +1,433 @@
+{
+    "Changes": 
+    [
+     //Farmhouse Edits
+        {
+			"LogName": "Farmhouse Crib", 
+			"Action": "EditImage",
+            "PatchMode": "Replace",
+            "FromArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64},
+			"ToArea": { "X": 80, "Y": 240, "Width": 48, "Height": 64 },
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Crib.png",
+            "When": {
+                "FHCrib": "true",
+			},
+		},
+        {
+			"LogName": "Farmhouse Crib", 
+			"Action": "EditImage",
+            "PatchMode": "Replace",
+            "FromArea": { "X": 128, "Y": 288, "Width": 48, "Height": 64 },
+			"ToArea": { "X": 128, "Y": 288, "Width": 48, "Height": 64 },
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Crib.png",
+            "When": {
+                "FHCrib": "true",
+			},
+		},
+        {
+			"LogName": "Farmhouse Crib - wood color", 
+			"Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Options/Crib/{{TargetWithoutPath}}_{{CribColor}}.png",
+            "When": {
+                "FHCrib": "true",
+                "CribColor |contains=Walnut": false,
+			},
+		},
+        {
+			"LogName": "Farmhouse Crib - sheet color", 
+			"Action": "EditImage",
+            "PatchMode": "Overlay",
+            "Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Options/Crib/Sheets/{{TargetWithoutPath}}_{{CribSheets}}.png",
+            "When": {
+                "FHCrib": "true",
+                "CribSheets |contains=Green": false,
+			},
+		},
+        {
+			"LogName": "Farmhouse Kitchen", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Kitchen-{{FHKitchen}}.png",
+            "When": {
+                "FHKitchen": "retro, nice"
+			}
+		},
+        {
+			"LogName": "Farmhouse Kitchen Fix 1", //minor fix #1
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 57, "Y": 205, "Width": 1, "Height": 2 },
+			"ToArea": { "X": 57, "Y": 205, "Width": 1, "Height": 2 },
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Kitchen-{{FHKitchen}}.png",
+            "When": {
+                "FHKitchen": "retro, nice"
+			}
+		},
+        {
+			"LogName": "Farmhouse Kitchen Fix 2", //minor fix #2
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 95, "Y": 306, "Width": 1, "Height": 2 },
+			"ToArea": { "X": 95, "Y": 306, "Width": 1, "Height": 2 },
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_Kitchen-{{FHKitchen}}.png",
+            "When": {
+                "FHKitchen": "retro, nice"
+			}
+		},
+        {
+			"LogName": "Farmhouse Kitchen Cursors2", //Fridge Doors
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors2",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}_FridgeDoor-{{FHKitchen}}.png",
+            "When": {
+                "FHKitchen": "retro, nice"
+			}
+		},
+    //Furniture Edits
+        {
+			"LogName": "Furniture 1", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/furniture, Tilesheets/furnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "Furniture1": "true"
+			}
+		},
+        {
+			"LogName": "Furniture 1 Butterfly transparency", 
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 304, "Y": 976, "Width": 32, "Height": 33 },
+			"ToArea": { "X": 304, "Y": 976, "Width": 32, "Height": 33 },
+			"Target": "TileSheets/furniture",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "Furniture1": "true"
+			}
+		},
+        {
+			"LogName": "Furniture 1 Joja Green", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/furniture",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_JojaGreen.png",
+            "When": {
+                "Furniture1": "true",
+                "JojaGreen": "true"
+			}
+		},
+        {
+			"LogName": "Furniture 1 Translations Blue",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/furniture",
+            "FromFile": "assets/Translations/{{TargetWithoutPath}}.{{language}}.png",
+            "When": {
+                "Furniture1": "true",
+                "JojaGreen": "false",
+                "Language": "ja, ko, zh"
+			}
+		},
+        {
+			"LogName": "Furniture 1 Translations Green",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/furniture",
+            "FromFile": "assets/Translations/{{TargetWithoutPath}}_Green.{{language}}.png",
+            "When": {
+                "Furniture1": "true",
+                "JojaGreen": "true",
+                "Language": "ja, ko, zh"
+			}
+		},
+        {
+			"LogName": "Furniture 2", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/furniture_2, Tilesheets/furniture_2Front",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "Furniture2": "true"
+			}
+		},
+        {
+			"LogName": "Furniture 3", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/furniture_3, Tilesheets/furniture_3Front",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "Furniture3": "true"
+			}
+		},
+        {
+			"LogName": "Joja Furniture", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/joja_Furniture, Tilesheets/joja_FurnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "JojaFurniture": "true",
+                "JojaGreen": "false",
+			}
+		},
+        {
+			"LogName": "Joja Furniture Green", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/joja_Furniture, Tilesheets/joja_FurnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_Green.png",
+            "When": {
+                "JojaFurniture": "true",
+                "JojaGreen": "true",
+			}
+		},
+        {
+			"LogName": "Junimo Furniture", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/junimo_furniture, Tilesheets/junimo_furnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "JunimoFurniture": "true"
+			}
+		},
+        {
+			"LogName": "Retro Furniture", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/retro_furniture, Tilesheets/retro_furnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "RetroFurniture": "true"
+			}
+		},
+        {
+			"LogName": "Wizard Furniture", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/wizard_furniture, Tilesheets/wizard_furnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "WizardFurniture": "true"
+			}
+		},
+        {
+			"LogName": "Wizard Furniture", 
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 0, "Y": 64, "Width": 32, "Height": 43 },
+			"ToArea": { "X": 0, "Y": 64, "Width": 32, "Height": 43},
+			"Target": "TileSheets/wizard_furniture, Tilesheets/wizard_furnitureFront",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "WizardFurniture": "true"
+			}
+		},
+        {
+			"LogName": "Craftables", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/Craftables",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png",
+            "When": {
+                "Craftables": "true"
+			}
+		},
+        {
+			"LogName": "Craftables Green Joja Cooler", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/Craftables",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}_JojaGreen.png",
+            "When": {
+                "Craftables": "true",
+                "JojaGreen": "true"
+			}
+		},
+     
+     // Framing/Molding/Windows
+        {
+			"LogName": "Town Framing color", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{TownFramingColor}}.png",
+            "When": {
+                "TownFramingColor |contains=WarmWhite": false,
+                "LocationName |contains=FarmHouse": false,
+                "LocationName |contains=Greenhouse": false,
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Town Framing color", //semi-transparent across doorway
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{TownFramingColor}}.png",
+            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
+            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
+            "When": {
+                "TownFramingColor |contains=WarmWhite": false,
+                "LocationName |contains=FarmHouse": false,
+                "LocationName |contains=Greenhouse": false,
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Farmhouse Framing color", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2, Maps/farmhouse_tiles, LooseSprites/Cursors",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{FHFramingColor}}.png",
+            "When": {
+                "FHFramingColor |contains=WarmWhite": false,
+                "LocationName |contains=FarmHouse": true
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Farmhouse Framing color", //semi-transparent across doorway -- added just in case custom maps have a doorway, not necessary for vanilla
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{FHFramingColor}}.png",
+            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
+            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
+            "When": {
+                "FHFramingColor |contains=WarmWhite": false,
+                "LocationName |contains=FarmHouse": true
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Farmhouse matching Walls & Floors", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/walls_and_floors",
+            "FromFile": "assets/Options/Walls & Floors/{{TargetWithoutPath}}_{{FHFramingColor}}.png",
+            "When": {
+                "WallsFloors": true,
+                "LocationName |contains=FarmHouse": true
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Greenhouse Framing color", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2, Maps/farmhouse_tiles, LooseSprites/Cursors",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{GreenhouseFramingColor}}.png",
+            "When": {
+                "GreenhouseFramingColor |contains=WarmWhite": false,
+                "LocationName |contains=Greenhouse": true
+			},
+            "Update": "OnLocationChange"
+		},
+         {
+			"LogName": "Greenhouse Framing color", //semi-transparent across doorway -- added just in case custom maps have a doorway, not necessary for vanilla
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{GreenhouseFramingColor}}.png",
+            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
+            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
+            "When": {
+                "GreenhouseFramingColor |contains=WarmWhite": false,
+                "LocationName |contains=Greenhouse": true
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Door color", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors, Maps/townInterior",
+            "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_{{TownDoorColor}}.png",
+            "When": {
+                "TownDoorColor |contains=WarmWhite": false,
+			},            
+		},
+        {
+			"LogName": "Door color pt2", //semi transparent version on TownInterior
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_{{TownDoorColor}}.png",
+            "FromArea": { "X": 384, "Y": 30, "Width": 16, "Height": 34 },
+            "ToArea": { "X": 384, "Y": 30, "Width": 16, "Height": 34 },
+            "When": {
+                "TownDoorColor |contains=WarmWhite": false,
+			},            
+		},
+        
+        
+    // Furniture color choice
+        {
+			"LogName": "TownInterior Furniture color", //main townInterior stuff
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2, TileSheets/ChairTiles",
+            "FromFile": "assets/Options/Furniture/{{FurnitureStyle}}/{{TargetWithoutPath}}_{{TownFurnitureColor}}.png",
+            "When": {
+                "FurnitureStyle |contains=Original": false,  
+			},
+		},
+        {
+			"LogName": "Special Event furniture match", //Leah & Gus special events
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors, LooseSprites/Cursors2",
+            "FromFile": "assets/Options/Furniture/{{TargetWithoutPath}}_{{TownFurnitureColor}}.png",
+            "When": {
+                "FurnitureStyle |contains=Original": false,  
+			},
+		},
+        {
+			"LogName": "Special Event furniture match - Gus Fix", //Fix Gus table color if saloon has custom color
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors2",
+            "FromFile": "assets/Options/Furniture/{{TargetWithoutPath}}_{{SaloonFurn}}.png",
+            "When": {
+                "SaloonFurn |contains=DEFAULT": false,  
+			},
+		},
+        {
+			"LogName": "TownInterior Furniture1 Match", //make furniture.png match recolor IF enabled
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Tilesheets/Furniture, Tilesheets/FurnitureFront",
+            "FromFile": "assets/Options/Furniture/{{FurnitureStyle}}/{{TargetWithoutPath}}_{{TownFurnitureColor}}.png",
+            "When": {
+                "FurnitureStyle |contains=Original": false,
+                "Furniture1": true,
+			},
+		},
+        {
+			"LogName": "TownInterior Craftables Match", //make craftables match recolor IF enabled
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Tilesheets/Craftables",
+            "FromFile": "assets/Options/Furniture/{{TargetWithoutPath}}_{{TownFurnitureColor}}.png",
+            "When": {
+                "FurnitureStyle |contains=Original": false,
+                "Craftables": true,
+			},
+		},
+        
+        
+    
+    ]
+}

@@ -5,7 +5,8 @@ townInterior & townInterior_2:
 - Small deco from: https://twitter.com/4_9_13  (Marnie's shelves books)
 - Small deco from: https://penzilla.itch.io/  (Marnie's Kitchen teapot)
 - Details of 1 fridge (french door type) from: https://limezu.itch.io/  (townInterior_2 kitchens)
-
+- Large painting in Emily's bedroom now a public domain Aurora Borealis photo https://www.publicdomainpictures.net/en/view-image.php?image=544051
+- Photos/Wall Art: www.nga.gov & www.artic.edu (Public domain images)
 
 Elliott House Tiles:
 - Rhodox for wood planks as walls, flowers, and wood & cloth textures.

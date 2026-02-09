@@ -1,0 +1,128 @@
+{
+    "Changes": 
+    [
+     //Non-optional edits
+        {
+			"LogName": "TownInteriors",
+			"Action": "Load",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png"
+		},
+        {
+			"LogName": "TownInterior int'l", //JojaMart to green
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}_JojaMart_Green.png",
+            "When": {
+                "JojaGreen": "true"
+			}
+		},
+        {
+			"LogName": "TownInterior int'l", //Apply translations to non-Joja areas
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Translations/townInterior.{{language}}.png",
+            "When": {
+                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
+			}
+		},
+        {
+			"LogName": "JojaMart interior int'l", //Apply blue JojaMart translations
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Translations/townInterior_JojaMart.{{language}}.png",
+            "When": {
+                "JojaGreen": "false",
+                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
+			}
+		},
+        {
+			"LogName": "JojaMart interior int'l", //Apply green JojaMart translations
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Translations/townInterior_JojaMart_Green.{{language}}.png",
+            "When": {
+                "JojaGreen": "true",
+                "Language": "es, fr, hu, it, ja, ko, pt, ru, tr, zh"
+			}
+		},
+        {
+            "LogName": "JojaMart Ruins Blue",
+            "Action": "EditImage",
+            "PatchMode": "Replace",
+            "Target": "Maps/JojaRuins_TileSheet",
+            "FromFile": "assets/Maps/JojaRuins_TileSheet.png",
+            "When": {
+				"JojaGreen": "false"
+			}
+		},
+        {
+            "LogName": "JojaMart Ruins Green",
+            "Action": "EditImage",
+            "PatchMode": "Replace",
+            "Target": "Maps/JojaRuins_TileSheet",
+            "FromFile": "assets/Maps/JojaRuins_TileSheet_Green.png",
+            "When": {
+				"JojaGreen": "true"
+			}
+		},
+        {
+			"LogName": "Farmhouse Tiles", //Makes framing, flooring etc match while in farmhouse
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/farmhouse_tiles",
+            "FromFile": "assets/Maps/{{TargetWithoutPath}}.png"
+		},
+        {
+			"LogName": "Cursors", //Interior Doors, etc
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors, LooseSprites/Cursors2",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"
+		},
+        {
+			"LogName": "Cursors Door Window", //Door window transparency fix
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 512, "Y": 149, "Width": 104, "Height": 31 },
+			"ToArea": { "X": 512, "Y": 149, "Width": 104, "Height": 31 },
+			"Target": "LooseSprites/Cursors",
+            "FromFile": "assets/LooseSprites/{{TargetWithoutPath}}.png"            
+		},        
+        {
+			"LogName": "ChairTiles", //In-front-of-character matching edits
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "TileSheets/ChairTiles",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
+		},
+        {
+			"LogName": "ChairTiles", //Fix for smaller couches
+			"Action": "EditImage",
+			"PatchMode": "Replace",
+            "FromArea": { "X": 160, "Y": 0, "Width": 48, "Height": 32 },
+			"ToArea": { "X": 160, "Y": 0, "Width": 48, "Height": 32},
+			"Target": "TileSheets/ChairTiles",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
+		}, 
+    // PATCHES FOR OTHER MODS    
+        {
+			"LogName": "Altar of Yoba rug fix",
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior",
+            "FromFile": "assets/Options/{{TargetWithoutPath}}_AoYRrugfix.png",
+            "When": {
+                "LocationName": "SeedShop",
+                "AOYR": true,
+			},
+            "Update": "OnLocationChange"
+		},
+    
+    
+    ]
+}
