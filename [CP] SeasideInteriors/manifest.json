@@ -13,5 +13,9 @@
 		  "UniqueID": "rainkius.SeasideValley",
 		  "IsRequired": false
 	   },
+       {
+         "UniqueID": "ManaKirel.VintageInterface2",
+         "IsRequired": false
+      },
     ]  
 }
