@@ -20,8 +20,8 @@
 			"PatchMode": "Replace",
 			"Target": "Maps/townInterior",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_AdventureGuildFix.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 43 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 43 },
+            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
+            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
             "When": {
                 "LocationName": "AdventureGuild",
                 "AdventureGuildInterior": true,
@@ -93,22 +93,8 @@
 			"LogName": "Marnie Shop Fixes - Framing color",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{MarnieFraming}}.png",
-            "When": {
-                "LocationName": "AnimalShop",
-                "MarnieFraming |contains= DEFAULT": false,                
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Marnie Shop Fixes - Framing Transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{MarnieFraming}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "AnimalShop",
                 "MarnieFraming |contains= DEFAULT": false,                
@@ -131,22 +117,8 @@
 			"LogName": "Museum Fixes - Framing color",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{MuseumFraming}}.png",
-            "When": {
-                "LocationName": "ArchaeologyHouse",
-                "MuseumFraming |contains= DEFAULT": false,                
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Museum Fixes - Framing transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{MuseumFraming}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "ArchaeologyHouse",
                 "MuseumFraming |contains= DEFAULT": false,                
@@ -184,8 +156,8 @@
 			"PatchMode": "Replace",
 			"Target": "Maps/townInterior",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_BlacksmithFix.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 43 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 43 },
+            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
+            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
             "When": {
                 "LocationName": "Blacksmith",
                 "BlacksmithInterior": true,
@@ -209,23 +181,8 @@
 			"LogName": "Refurb Comm Ctr - Framing color",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{CommCtrFraming}}.png",
-            "When": {
-                "LocationName": "CommunityCenter",
-                "IsCommunityCenterComplete": true,
-                "CommCtrFraming |contains= DEFAULT": false,                
-			},
-            "Update": "OnLocationChange"
-		}, 
-        {
-			"LogName": "Refurb Comm Ctr - Framing color Transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior,",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{CommCtrFraming}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "CommunityCenter",
                 "IsCommunityCenterComplete": true,
@@ -324,22 +281,8 @@
 			"LogName": "Saloon - Framing color",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{SaloonFraming}}.png",
-            "When": {
-                "LocationName": "Saloon",
-                "SaloonFraming |contains= DEFAULT": false,                
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Saloon - Framing transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{SaloonFraming}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "Saloon",
                 "SaloonFraming |contains= DEFAULT": false,                
@@ -438,22 +381,8 @@
 			"LogName": "Carpenter - Framing color",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{CarpenterFraming}}.png",
-            "When": {
-                "LocationName": "ScienceHouse",
-                "CarpenterFraming |contains= DEFAULT": false,                
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Carpenter - Framing color Transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior,",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{CarpenterFraming}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "ScienceHouse",
                 "CarpenterFraming |contains= DEFAULT": false,                
@@ -474,6 +403,32 @@
             "Update": "OnLocationChange"
 		},
         {
+			"LogName": "Carpenter counter to match framing", // if carpenter has unique framing color
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Robin_{{CarpenterFraming}}.png",
+            "When": {
+                "LocationName": "ScienceHouse",
+                "CarpenterCounterFraming": true,
+                "CarpenterFraming |contains= DEFAULT": false,
+			},
+            "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Carpenter counter to match framing", // if carpenter uses town framing color
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
+            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Robin_{{TownFramingColor}}.png",
+            "When": {
+                "LocationName": "ScienceHouse",
+                "CarpenterCounterFraming": true,
+                "CarpenterFraming |contains= DEFAULT": true,
+			},
+            "Update": "OnLocationChange"
+		}, 
+        {
 			"LogName": "Carpenter Shop Fixes",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
@@ -489,22 +444,8 @@
 			"LogName": "Sebastian Room - Framing",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_BlackWarm.png",
-            "When": {
-                "LocationName": "SebastianRoom",
-                "SebastianInterior": true,
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Sebastian Room - Framing Transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_BlackWarm.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "SebastianRoom",
                 "SebastianInterior": true,
@@ -541,8 +482,8 @@
 			"PatchMode": "Replace",
 			"Target": "Maps/townInterior",
             "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_BlackWarm.png",
-            "FromArea": { "X": 384, "Y": 31, "Width": 16, "Height": 33 },
-            "ToArea": { "X": 384, "Y": 31, "Width": 16, "Height": 33 },
+            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
+            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
             "When": {
                 "LocationName": "SebastianRoom",
                 "SebastianInterior": true,
@@ -564,22 +505,8 @@
 			"LogName": "Pierre - Framing color",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{PierreFraming}}.png",
-            "When": {
-                "LocationName": "SeedShop",
-                "PierreFraming |contains= DEFAULT": false,                
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Pierre - Framing transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{PierreFraming}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName": "SeedShop",
                 "PierreFraming |contains= DEFAULT": false,                
@@ -629,8 +556,8 @@
 			"PatchMode": "Replace",
 			"Target": "Maps/townInterior",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_TrailerFix.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 43 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 43 },
+            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
+            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
             "When": {
                 "LocationName": "Trailer",
                 "TrailerInterior": true,
@@ -683,20 +610,6 @@
 			"PatchMode": "Overlay",
 			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_WizardFix.png",
-            "When": {
-                "LocationName |contains=WizardHouse": true,
-                "WizardInterior": true,
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Wizard House Framing Transparency",  
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/{{TargetWithoutPath}}_WizardFix.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "LocationName |contains=WizardHouse": true,
                 "WizardInterior": true,

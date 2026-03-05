@@ -261,23 +261,8 @@
 			"LogName": "Town Framing color", 
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{TownFramingColor}}.png",
-            "When": {
-                "TownFramingColor |contains=WarmWhite": false,
-                "LocationName |contains=FarmHouse": false,
-                "LocationName |contains=Greenhouse": false,
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Town Framing color", //semi-transparent across doorway
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{TownFramingColor}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "TownFramingColor |contains=WarmWhite": false,
                 "LocationName |contains=FarmHouse": false,
@@ -289,22 +274,8 @@
 			"LogName": "Farmhouse Framing color", 
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, Maps/farmhouse_tiles, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2, Maps/farmhouse_tiles",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{FHFramingColor}}.png",
-            "When": {
-                "FHFramingColor |contains=WarmWhite": false,
-                "LocationName |contains=FarmHouse": true
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Farmhouse Framing color", //semi-transparent across doorway -- added just in case custom maps have a doorway, not necessary for vanilla
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{FHFramingColor}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "FHFramingColor |contains=WarmWhite": false,
                 "LocationName |contains=FarmHouse": true
@@ -327,22 +298,8 @@
 			"LogName": "Greenhouse Framing color", 
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, Maps/farmhouse_tiles, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2, Maps/farmhouse_tiles",
             "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{GreenhouseFramingColor}}.png",
-            "When": {
-                "GreenhouseFramingColor |contains=WarmWhite": false,
-                "LocationName |contains=Greenhouse": true
-			},
-            "Update": "OnLocationChange"
-		},
-         {
-			"LogName": "Greenhouse Framing color", //semi-transparent across doorway -- added just in case custom maps have a doorway, not necessary for vanilla
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_{{GreenhouseFramingColor}}.png",
-            "FromArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
-            "ToArea": { "X": 384, "Y": 21, "Width": 16, "Height": 10 },
             "When": {
                 "GreenhouseFramingColor |contains=WarmWhite": false,
                 "LocationName |contains=Greenhouse": true
@@ -365,8 +322,8 @@
 			"PatchMode": "Replace",
 			"Target": "Maps/townInterior",
             "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_{{TownDoorColor}}.png",
-            "FromArea": { "X": 384, "Y": 30, "Width": 16, "Height": 34 },
-            "ToArea": { "X": 384, "Y": 30, "Width": 16, "Height": 34 },
+            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
+            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
             "When": {
                 "TownDoorColor |contains=WarmWhite": false,
 			},            

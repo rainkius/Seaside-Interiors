@@ -1,10 +1,18 @@
 {
    "Format": "2.3.0",
    "ConfigSchema": {
+       //Master Options       
        "JojaGreen": {
 			"AllowValues": "true, false",
 			"Default": "true",
             "Description": "Change anything Joja-related to the green of the exterior from Seaside Valley",
+            "Section": "Master Options"
+		},
+        "LiteMode": {
+			"AllowValues": "true, false",
+			"Default": "false",
+            "Description": "Disables most of the unique location edits & customizations to improve loading time (important graphical fixes are still available). The town framing, furniture, and door color options will be used everywhere. Map edits will still apply if they are enabled. Defaults to FALSE - set to true only if you are having trouble with location-switch lag and don't mind the lack of customization.",
+            "Section": "Master Options"
 		},
         //Town
         "Bathhouse": {
@@ -111,10 +119,16 @@
             "Description": "Set the color of the furniture in the carpenter shop. DEFAULT will use whatever you chose for the rest of the town.",
             "Section": "Location-Specific Unique Edits"
 		},
+        "CarpenterCounterFraming": {
+			"AllowValues": "true, false",
+			"Default": "true",
+            "Description": "If enabled, the wood/stone shelf and shop counter at Robin's will match the framing color (instead of the furniture color) (Available in LiteMode)",
+            "Section": "Location-Specific Unique Edits"
+		},
         "CommCtrInterior": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "Corrects a few issues in the refurbished Community Center - sink in kitchen, makes black couch into blue in reading corner, and fixes the shadow under pantry shelf",
+            "Description": "Corrects a few issues in the refurbished Community Center - sink in kitchen, makes black couch into blue in reading corner, and fixes the shadow under pantry shelf (Available in LiteMode)",
             "Section": "Location-Specific Unique Edits"
 		},
         "CommCtrFraming": {
@@ -150,7 +164,7 @@
         "MarnieInterior": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "Changes Jas's bedspread and stool cushion to pink, and makes the kitchen a custom white wood with a stove",
+            "Description": "Changes Jas's bedspread and stool cushion to pink, and makes the kitchen a custom white wood with a stove. (Available in LiteMode)",
             "Section": "Location-Specific Unique Edits"
 		},
         "MarnieMapEdit": {
@@ -186,13 +200,13 @@
         "PierreMapEdit": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "Fixes the double bed in Pierre & Caroline's roomn (Compatible with both SVE and Less Ugly Interiors)",
+            "Description": "Fixes the double bed in Pierre & Caroline's room (Compatible with both SVE and Less Ugly Interiors)",
             "Section": "Location-Specific Unique Edits"
 		},
         "PierreInterior": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "Gives Pierre & Caroline a custom bedspread and fixes the corkboard texture (note: bedspread will not look right without the map fix enabled)",
+            "Description": "Gives Pierre & Caroline a custom bedspread and fixes the corkboard texture (note: bedspread will not look right without the map fix enabled) (Available in LiteMode)",
             "Section": "Location-Specific Unique Edits"
 		},
         "PierreFraming": {
@@ -210,7 +224,7 @@
         "SaloonInterior": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "Changes the wall in Gus's bedroom to plaster, gives him a plaid bedspread, fixes some shadows around the bar shelf corners, and removes the unnecessary cord hanging off the TV in Alex's special room",
+            "Description": "Changes the wall in Gus's bedroom to plaster, gives him a plaid bedspread, fixes some shadows around the bar shelf corners, and removes the unnecessary cord hanging off the TV in Alex's special room (Available in LiteMode)",
             "Section": "Location-Specific Unique Edits"
 		},
         "SaloonFraming": {
@@ -228,7 +242,7 @@
         "SaloonBarFraming": {
 			"AllowValues": "true, false",
 			"Default": "true",
-            "Description": "If enabled, the bar shelves and counter in the saloon will match the framing color (instead of the furniture color)",
+            "Description": "If enabled, the bar shelves and counter in the saloon will match the framing color (instead of the furniture color) (Available in LiteMode)",
             "Section": "Location-Specific Unique Edits"
 		},
         "SamInterior": {
@@ -469,11 +483,15 @@
                 "HeartEvents": true,
             },
 		},
+    
     //Customizations for framing, furniture etc
         {
 			"LogName": "Customizations code",
 			"Action": "Include",
 			"FromFile": "code/Customizations.json",
+            "When": {
+                "LiteMode": false,
+            },
 		},
         
     //Unique Location edits (e.g. framing at Marnie's, fixes to certain maps)
@@ -481,6 +499,19 @@
 			"LogName": "Unique Location Code",
 			"Action": "Include",
 			"FromFile": "code/UniqueLocationEdits.json",
+            "When": {
+                "LiteMode": false,
+            },
+		},
+        
+    //Lite Mode Customizations & edits
+        {
+			"LogName": "Lite Mode Code",
+			"Action": "Include",
+			"FromFile": "code/LiteMode.json",
+            "When": {
+                "LiteMode": true,
+            },
 		},
         
    ]
