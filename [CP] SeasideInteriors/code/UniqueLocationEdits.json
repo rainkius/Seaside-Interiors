@@ -15,20 +15,6 @@
             "Update": "OnLocationChange"
 		},
         {
-			"LogName": "Adventure Guild Framing & Door fix", //semi transparent version on TownInterior
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/{{TargetWithoutPath}}_AdventureGuildFix.png",
-            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "When": {
-                "LocationName": "AdventureGuild",
-                "AdventureGuildInterior": true,
-			},
-            "Update": "OnLocationChange"
-		},
-        {
 			"LogName": "Adventure Guild Furniture Chair Tiles", 
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
@@ -40,30 +26,6 @@
 			},
             "Update": "OnLocationChange"
         },
-        {
-			"LogName": "Adventure Guild Door", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "LooseSprites/Cursors",
-            "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_Chestnut.png",
-            "When": {
-                "LocationName": "AdventureGuild",
-                "AdventureGuildInterior": true,
-			},
-            "Update": "OnLocationChange"
-        },
-        {
-			"LogName": "Adventure Guild Transom Window fix", 
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "LooseSprites/Cursors",
-            "FromFile": "assets/Options/Framing/{{TargetWithoutPath}}_Framing_Raisin.png",
-            "When": {
-                "LocationName": "AdventureGuild",
-                "AdventureGuildInterior": true,
-			},
-            "Update": "OnLocationChange"
-        },        
         {
 			"LogName": "Marnie Shop Fixes",
 			"Action": "EditImage",
@@ -142,7 +104,7 @@
 			"LogName": "Blacksmith Fixes",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_BlacksmithFix.png",
             "When": {
                 "LocationName": "Blacksmith",
@@ -150,20 +112,6 @@
 			},
             "Update": "OnLocationChange"
 		},
-        {
-			"LogName": "Blacksmith door transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/{{TargetWithoutPath}}_BlacksmithFix.png",
-            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "When": {
-                "LocationName": "Blacksmith",
-                "BlacksmithInterior": true,
-			},
-            "Update": "OnLocationChange"
-		}, 
         {
 			"LogName": "Refurb Comm Ctr Fixes",
 			"Action": "EditImage",
@@ -219,13 +167,23 @@
 			"LogName": "Haley House Fixes",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, LooseSprites/Cursors",
+			"Target": "Maps/townInterior",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_HaleyEmilyFix.png",
             "When": {
                 "LocationName": "HaleyHouse",
                 "HaleyInterior": true,
 			},
             "Update": "OnLocationChange"
+		},
+        {
+			"LogName": "Haley House Fixes",  //Emily heart event bed covers
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "LooseSprites/Cursors",
+            "FromFile": "assets/Options/{{TargetWithoutPath}}_HaleyEmilyFix.png",
+            "When": {
+                "HaleyInterior": true,
+			},
 		},
         {
 			"LogName": "Harvey Room Fixes",
@@ -463,33 +421,7 @@
                 "SebastianInterior": true,
 			},
             "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Sebastian Room - Door",
-			"Action": "EditImage",
-			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, LooseSprites/Cursors",
-            "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_BlackWarm.png",
-            "When": {
-                "LocationName": "SebastianRoom",
-                "SebastianInterior": true,
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Sebastian Room - Door transparency", 
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/Door/{{TargetWithoutPath}}_BlackWarm.png",
-            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "When": {
-                "LocationName": "SebastianRoom",
-                "SebastianInterior": true,
-			},
-            "Update": "OnLocationChange"
-		},
+		},       
         {
 			"LogName": "Pierre Shop Map Edits", //Only edits double bed
 			"Action": "EditMap",
@@ -542,22 +474,8 @@
 			"LogName": "Pam Trailer Fixes",
 			"Action": "EditImage",
 			"PatchMode": "Overlay",
-			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+			"Target": "Maps/townInterior, Maps/townInterior_2",
             "FromFile": "assets/Options/{{TargetWithoutPath}}_TrailerFix.png",
-            "When": {
-                "LocationName": "Trailer",
-                "TrailerInterior": true,
-			},
-            "Update": "OnLocationChange"
-		},
-        {
-			"LogName": "Pam Trailer - Door/Framing Transparency",
-			"Action": "EditImage",
-			"PatchMode": "Replace",
-			"Target": "Maps/townInterior",
-            "FromFile": "assets/Options/{{TargetWithoutPath}}_TrailerFix.png",
-            "FromArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
-            "ToArea": { "X": 384, "Y": 16, "Width": 16, "Height": 48 },
             "When": {
                 "LocationName": "Trailer",
                 "TrailerInterior": true,

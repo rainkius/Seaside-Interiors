@@ -341,6 +341,17 @@
                 "Craftables": true,
 			},
 		},
+    // Light Flooring
+        {
+			"LogName": "Town Light Wood Floor", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+            "FromFile": "assets/Options/Wood Floor/{{TargetWithoutPath}}_Flooring-Light.png",
+            "When": {
+                "LighterFlooring": true,  
+			},
+		},    
     // Tiny Map Edits        
         {
 			"LogName": "Marnie Shop Map Edits", //Only edits Jas's bed
@@ -388,6 +399,7 @@
             "ToArea": { "X": 23, "Y": 3, "Width": 3, "Height": 3  },
             "When": {
                 "PierreMapEdit": true,
+                "SVE": false,
 			},
 		},
     // Specific Location edits - Important only

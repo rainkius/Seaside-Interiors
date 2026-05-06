@@ -328,6 +328,17 @@
                 "TownDoorColor |contains=WarmWhite": false,
 			},            
 		},
+    // Light Flooring
+        {
+			"LogName": "Town Light Wood Floor", 
+			"Action": "EditImage",
+			"PatchMode": "Overlay",
+			"Target": "Maps/townInterior, Maps/townInterior_2, LooseSprites/Cursors",
+            "FromFile": "assets/Options/Wood Floor/{{TargetWithoutPath}}_Flooring-Light.png",
+            "When": {
+                "LighterFlooring": true,  
+			},
+		},    
         
         
     // Furniture color choice

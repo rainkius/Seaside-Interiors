@@ -81,6 +81,12 @@
             "Description": "The color that will be either single or multi-toned. If you chose Original style, this choice affects nothing.",
             "Section": "Town"
 		},
+        "LighterFlooring": {
+			"AllowValues": "true, false",
+			"Default": "false",
+            "Description": "Replace the town interior wood flooring with a lighter version. Defaults to false",
+            "Section": "Town"
+		},
         
         //Specific Location edits
         "AdventureGuildInterior": {
